@@ -1,0 +1,294 @@
+body {
+
+}
+
+.cover {
+	background: url(../img/corner.gif) no-repeat;
+	position: absolute;
+	height: 3px;
+	width: 3px;
+}
+
+.cover.tl {
+	background-position: 0 0;
+	left: 0;
+	top: 0;
+}
+
+.cover.tr {
+	background-position: right 0;
+	right: 0;
+	top: 0;
+}
+
+.cover.bl {
+	background-position: 0 bottom;
+	bottom: 0;
+	left: 0;
+}
+
+.cover.br {
+	background-position: right bottom;
+	bottom: 0;
+	right: 0;
+}
+
+.profile .list_i.active .tl,
+.profile .list_i.active .tr,
+.profile .list_i.active .bl,
+.profile .list_i.active .br,
+.contacts .tl,
+.contacts .tr,
+.contacts .bl,
+.contacts .br {
+	background: url(../img/corner_aside.png) no-repeat;
+	height: 4px;
+	width: 4px;
+	z-index: 50;
+}
+
+.profile .list_i.active .tr,
+.contacts .tr {
+	background-position: 0 -5px;
+}
+
+.profile .list_i.active .br {
+	background-position: 0 -10px;
+}
+
+.profile .list_i.active .bl {
+	background-position: 0 -15px;
+}
+
+.contacts .br {
+	background-position: -6px -10px;
+}
+
+.contacts .bl {
+	background-position: -6px -15px;
+}
+
+.contact .cover.tl,
+.contact .cover.tr,
+.popup .tl,
+.popup .tr {
+	background: url(../img/corner_contact.gif) no-repeat;
+	width: 4px;
+}
+
+.contact .cover.tr,
+.popup .tr {
+	background-position: 0 bottom;
+}
+
+.form_data .corner {
+	background: url(../img/form_inp_spr.gif) no-repeat;
+	height: 3px;
+	position: absolute;
+	width: 3px;
+	z-index: 10;
+}
+
+
+.form_data .corner.tl {
+	left: 0;
+}
+
+.form_data .corner.tl,
+.form_data .corner.tr {
+	background-position: 0 0;
+	top: 28px;
+}
+
+.form_data .corner.tr {
+	background-position: 0 -3px;
+	right: 0;
+}
+
+.form_data .corner.br {
+	background-position: 0 -6px;
+	right: 0;
+	bottom: 0;
+}
+
+.form_data .corner.bl {
+	background-position: 0 -9px;
+	left: 0;
+	bottom: 0;
+}
+
+.form_data .data_wrap .tl {
+	top: 0;
+	left: 0;
+}
+
+.form_data .data_wrap .tr {
+	top: 0;
+	right: -6px;
+}
+
+.form_data .data_wrap .br {
+	bottom: 0;
+	right: -6px;
+}
+
+.form_data .data_wrap .bl {
+	bottom: 0;
+}
+
+.form_data .captcha .tl {
+	top: -1px;
+	left: -1px;
+}
+
+.form_data .captcha .tr {
+	top: -1px;
+	right: -1px;
+}
+
+.form_data .captcha .br {
+	bottom: -1px;
+	right: -1px;
+}
+
+.form_data .captcha .bl {
+	bottom: -1px;
+	left: -1px;
+}
+
+.form_data .captcha_code .tl {
+	left: 0;
+	top: 0;
+}
+
+.form_data .captcha_code .tr {
+	top: 0;
+	right: 0;
+}
+
+/*.wrap_popup .bl {
+	bottom: 4px;
+	left: 0;
+}
+
+.wrap_popup .br {
+	bottom: 4px;
+	right: 0;
+}*/
+
+
+
+.thumbnail_shadow {
+	background: url(../img/shadow_item_port.png) no-repeat;
+	right: auto;
+	bottom: auto;
+	top: 0;
+	left: 0;
+	height: 129px;
+	width: 183px;
+}
+
+.portfolio .thumbnail_photo_a:hover .thumbnail_shadow {
+	background-position: 0 bottom;
+}
+
+.wrap_popup .shadow_popup {
+	position: absolute;
+	top: 0;
+	left: -5px;
+	z-index: -1;
+}
+
+.shadow {
+	filter: alpha(opacity=50);
+}
+
+.general_info .photo {
+	border: 0;
+	height: 207px;
+	width: 207px;
+}
+
+.general_info .photo .photo_cover {
+	display: block;	
+}
+
+.portfolio .list_i input { 
+	filter: alpha(opacity=0);
+}
+
+.form_data .tl.corner,
+.form_data .tr.corner {
+	top: 23px;
+}
+
+.form_data .col_r input,
+.form_data .col_l input {
+	width: 156px;
+}
+
+.form_data .data_wrap .tl,
+.form_data .data_wrap .tr {
+	top: 0;
+}
+
+.form_data .captcha .tl,
+.form_data .captcha .tr {
+	top: -1px;
+}
+
+.form_data .captcha_code .tl,
+.form_data .captcha_code .tr {
+	top: 0;
+}
+
+.popup .col_r input,
+.popup .col_l input {
+	display: block;
+	font-size: 40px;
+	height: 60px;
+	line-height: 60px;
+	margin: 0 auto;
+	width: 409px;
+}
+
+.error_password .error_corner {
+	padding: 0 22px 0 0;
+}
+
+.wrap_popup .shadow_popup {
+	display: block;
+}
+
+.wrap_popup .corner.tl,
+.wrap_popup .corner.tr {
+	left: 26px;
+	top: 43px;
+}
+
+.wrap_popup .corner.tr,
+.wrap_popup .col_l .corner.tr {
+	left: auto;
+	right: 25px;
+}
+
+.wrap_popup .col_l .corner.tr {
+	right: 26px;
+}
+
+.wrap_popup .corner.bl {
+	left: 26px;
+}
+
+.wrap_popup .corner.br {
+	right: 26px;
+}
+
+.wrap_popup .col_r .error_corner {
+	padding: 0 38px 0 0;
+}
+
+.form_data textarea {
+	max-width: 358px;
+	width: 358px;
+}
