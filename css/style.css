@@ -617,6 +617,7 @@ aside {
 .thumbnail_shadow {
 	/*background: url(../img/shadow_item_port.png) no-repeat;*/
 	background: #016ca4;
+	display: none;
 	opacity: 0.75;
 	left: 2px;
 	position: absolute;
@@ -631,6 +632,8 @@ aside {
 	border: 2px solid #3ba8c0;
 	display: block;
 	text-align: center;
+	height: 130px;
+	width: 178px;
 }
 
 .portfolio .thumbnail_photo_a img {
@@ -638,11 +641,11 @@ aside {
 }
 
 .portfolio .thumbnail_photo_a:hover .thumbnail_shadow {
-	display: none;
+	display: block;
 }
 
 .portfolio .thumbnail_photo_a:hover .wrap {
-	display: none;
+	display: block;
 }
 
 .add_project {
@@ -672,6 +675,7 @@ aside {
 }
 
 .thumbnail_photo_a .wrap {
+	display: none;
 	height: 23px;
 	left: 0;
 	margin: -10px 0 0;
