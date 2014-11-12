@@ -17,65 +17,12 @@
 	<div class="wrapper">
 		<div class="wrapper_inner">
 			<div class="wrap_header">
-				<header>
-					<div class="share">
-						<a class="share_a vk" href="https://vk.com/id275779973">vkontakte</a>
-						<a class="share_a twitter" href="https://twitter.com/sergeant_kir">twitter</a>
-						<a class="share_a facebook" href="https://www.facebook.com/kirill.granev.5">facebook</a>
-						<a class="share_a github" href="https://github.com/mustang85">github</a>
-					</div>
-					<div class="logo">
-						<a class="logo_a" href="/index.html">
-							<img class="logo_img" src="img/logo.png" height="58" width="245" alt="" />
-						</a>
-					</div>
-			</header>
+				<?php include 'templates/header.php' ?>
 			</div>
 
 			<div class="main">
-				<aside>
-					<section class="profile">
-						<ul class="list">
-							<li class="list_i active">
-								<a href="#" class="list_i_a">Обо мне</a>
-								<span class="cover tl"></span>
-								<span class="cover tr"></span>
-							</li>
-							<li class="list_i"><a href="/work.html" class="list_i_a">Мои работы</a></li>
-							<li class="list_i last">
-								<a href="/contact.html" class="list_i_a">Связаться со мной</a>
-								<span class="cover bl"></span>
-								<span class="cover br"></span>
-							</li>
-						</ul>
+				<?php include 'templates/aside.php' ?>
 
-						<span class="cover tl"></span>
-						<span class="cover tr"></span>
-						<span class="cover bl"></span>
-						<span class="cover br"></span>
-					</section>
-
-					<section class="contacts">
-						<h3 class="h3">Контакты</h3>
-
-						<ul class="list">
-							<li class="list_i email">
-								<i class="icon icon_email"></i> <a class="list_i_a" href="mailto:sergeant-kir@mail.ru">sergeant-kir@mail.ru</a>
-							</li>
-							<li class="list_i phone">
-								<i class="icon icon_phone"></i> +7 926 458 01 30
-							</li>
-							<li class="list_i nickname">
-								<i class="icon  icon_skype"></i> oldersergeant
-							</li>
-						</ul>
-
-						<span class="cover tl"></span>
-						<span class="cover tr"></span>
-						<span class="cover bl"></span>
-						<span class="cover br"></span>
-					</section>
-				</aside>
 				<div class="content">
 					<section class="general_info">
 						<h2 class="h2"><span class="decor">Основная информация</span></h2>
@@ -181,9 +128,7 @@
 		
 		</div>
 		<div class="wrap_footer">
-			<footer>
-				<p>© 2014, Это мой сайт, пожалуйста, не копируйте и не воруйте его</p>
-			</footer>	
+			<?php include 'templates/footer.php'; ?>
 		</div>
 	</div>
 
