@@ -3,6 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/normalize.css" />
 	<link rel="stylesheet" href="css/style.css" />
 	<link rel="shortcut icon" type="image/icon" href="favicon.ico" />
@@ -79,18 +81,20 @@
 						<h2 class="h2">У вас интересный проект? Напишите мне</h2>
 						<form class="form__data">
 							<div class="form__row">
-								<div class="form__col_r">
-									<label for="inputEmail">Email</label>
-						       
-									<input type="email" name="email" id="inputEmail" value="" tabindex="2" placeholder="Куда мне писать" />
-									<span class="form__error"></span>
-								</div>
+								
 
 								<div class="form__col_l">
 									<label for="inputName">Имя</label>
 
 									<input type="text" name="login" id="inputName" value="" maxlength="40" tabindex="1" placeholder="Как к Вам обращаться" />
 
+									<span class="form__error"></span>
+								</div>
+
+								<div class="form__col_r">
+									<label for="inputEmail">Email</label>
+						       
+									<input type="email" name="email" id="inputEmail" value="" tabindex="2" placeholder="Куда мне писать" />
 									<span class="form__error"></span>
 								</div>
 								
@@ -118,9 +122,8 @@
 								
 
 						    <div class="form__regist">
+						    	<input class="form__reset" type="reset" name="reset" id="reset" value="Очистить" />
 						    	<input type="submit" name="submit" id="submit" value="Отправить" />
-
-								<input class="form__reset" type="reset" name="reset" id="reset" value="Очистить" />
 						    </div>
 								
 
@@ -128,6 +131,14 @@
 					</section>
 
 				</div>
+				
+				<div class="share">
+					<a class="share__link vk" href="https://vk.com/id275779973">vkontakte</a>
+					<a class="share__link twitter" href="https://twitter.com/sergeant_kir">twitter</a>
+					<a class="share__link facebook" href="https://www.facebook.com/kirill.granev.5">facebook</a>
+					<a class="share__link github" href="https://github.com/mustang85">github</a>
+				</div>
+
 			</div>
 			<div class="wrap__footer">
 				<footer>
