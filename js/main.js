@@ -22,6 +22,8 @@ $(function() {
 		setUpListener: function () {
 			$('.form__data').on('submit', app.submitForm);
 			$('.form__data').on('keydown', 'input, textarea', app.removeError);
+			$('.form__data').on('click', '.form__reset', app.resetForm);
+			$('.form__data').on('blur', 'input, textarea', app.validField);
 		},
 
 		submitForm: function (e) {
@@ -47,7 +49,6 @@ $(function() {
 					tooltip = formRow.find('.form__error'),
 					labelText = formRow.find('label').text().toLowerCase(),
 					txtError = 'Введите ' + labelText;
-					console.log(txtError);
 
 				if (val.length === 0) {
 					
@@ -56,10 +57,11 @@ $(function() {
 					}
 
 					label
-						.addClass('animated hinge')
-						.css('color','#f97e76')
+						.addClass('animated hinge has__error_txt')
 						.next('textarea')
 						.addClass('has__error');
+
+					currentInput.addClass('has__error');
 					
 					tooltip.text(txtError).show();
 					valid = false;
@@ -67,7 +69,6 @@ $(function() {
 
 					label
 						.addClass('animated flash')
-						.css('color','#82ca51')
 						.next('input')
 						.addClass('has__success');
 				}
@@ -82,7 +83,7 @@ $(function() {
 			$(this)
 				.siblings('.form__error')
 				.text('спасибо')
-				.css('color','#82ca51')
+				.addClass('has__success_txt')
 				.fadeOut(2500);
 
 			$(this)
@@ -93,9 +94,56 @@ $(function() {
 
 			$(this)
 				.siblings('label')
-				.removeClass('animated hinge')
-				.css('color','#82ca51')
-				.addClass('animated flash');
+				.removeClass('animated hinge has__error_txt')
+				.addClass('animated flash has__success_txt');
+
+
+		},
+
+		resetForm: function () {
+			var labels = app.form__data.find('label')
+			app.form__data.find('.form__error').hide();
+			var elms = app.form__data.find('input, textarea');
+			console.log(elms);
+
+			$.each(labels, function(index, val) {
+			 	if (labels.hasClass('has__success_txt') || labels.hasClass('has__error_txt')) {
+			 	 	labels.removeClass();
+				}
+			});
+
+			$.each(elms, function(index, val) {
+
+			 	if (elms.hasClass('has__success')) {
+			 	 	elms.removeClass('has__success');
+			 	} else {
+			 		elms.removeClass('has__error');
+			 	}
+
+			});
+
+		},
+
+		validField: function () {
+			var currentVal = $(this).val();
+			
+			if (currentVal.length === 0) {
+
+				var	formRow = $(this).closest('div '),
+					label = formRow.find('label'),
+					tooltip = formRow.find('.form__error'),
+					labelText = formRow.find('label').text().toLowerCase(),
+					txtError = 'Введите ' + labelText;
+
+				label
+					.addClass('animated hinge has__error_txt')
+					.next('textarea')
+					.addClass('has__error');
+
+				currentInput.addClass('has__error');
+				tooltip.text(txtError).show();
+
+			}
 		}
 
 

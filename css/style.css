@@ -1004,7 +1004,7 @@ input:focus {
 }
 
 .hide {	
-	
+	display: none !important;
 }
 
 .shadow {
@@ -1188,8 +1188,16 @@ input:focus {
 	border: 1px solid #82ca51 !important;
 }
 
+.form__data .has__success_txt {
+	color: #82ca51;	
+}
+
 .has__error {
 	border: 1px solid #f97e76 !important;
+}
+
+.form__data .has__error_txt {
+	color: #f97e76
 }
 
 .animated {
