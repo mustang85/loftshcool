@@ -1200,6 +1200,21 @@ input:focus {
 	color: #f97e76
 }
 
+#captcha {
+	position: relative;
+}
+
+#captcha table {
+	top: -55px;
+	height: 95px;
+	position: absolute;
+	width: 100%;
+}
+
+#captcha table {
+}
+
+
 .animated {
   -webkit-animation-duration: 1s;
           animation-duration: 1s;

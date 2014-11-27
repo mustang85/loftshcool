@@ -111,11 +111,11 @@
 								<label for="captchaInput" class="captcha__title">Введите код, указанный на картинке</label>
 								<div class="form__col_l">
 									<div class="captcha">
-										<img width="180" height="77" alt="" src="img/captcha.gif" />
+										<p id="captcha"></p>
 									</div>
 								</div>
 								<div class="form__col_r">
-									<input class="captcha__code" type="text" name="captcha[input]" id="captchaInput" value="" tabindex="5" placeholder="введите код">
+									<input class="captcha__code" type="text" id="captchaText" />
 									<span class="form__error"></span>
 								</div>	
 							</div>
@@ -151,6 +151,20 @@
 	<script src="js/jquery-1.11.1.min.js"></script>
 	<script src="js/jquery.placeholder.js"></script>
 	<script src="js/prefixfree.js"></script>
+	<script src="js/jquery.clientsidecaptcha.js"></script>
 	<script src="js/main.js"></script>
+	<script type="text/javascript">
+
+	
+
+			var flag = $("form").clientSideCaptcha({
+				input: "#captchaText", 
+				display: "#captcha",
+				pass : function() { console.log('ok'); return true; },
+				fail : function() { console.log('fales'); return false; }
+			});
+
+
+		</script>
 </body>
 </html>
