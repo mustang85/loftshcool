@@ -821,6 +821,10 @@ footer p {
 	width: 93.3%;
 }
 
+.form__data textarea + .form__error {
+	bottom: 5px;
+}
+
 .form__data .captcha {
 	background: #FFF;
 	border: 1px solid #3ba8c0;
@@ -1077,8 +1081,8 @@ input:focus {
 }
 
 .popup_project .form__col_l {
-	margin: 0 0 12px;
 	position: relative;
+	margin: 0 auto 12px;
 }
 
 .popup_project .form__regist {
@@ -1176,7 +1180,7 @@ input:focus {
 	color: #f97e76;
 	font-size: 0.75em;
 	position: absolute;
-	bottom: -18px;
+	bottom: -21px;
 	left: 0;
 }
 

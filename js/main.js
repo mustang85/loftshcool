@@ -11,14 +11,11 @@ $(function() {
 	});
 
 	/* validation form */
-	console.log('dsf');
 
 	var app = {
 
 		initialize: function () {
 			this.form__data = $('.form__data');
-			this.tooltip = this.form__data.find('.form__error'),
-
 			this.setUpListener();
 		},
 
@@ -45,19 +42,26 @@ $(function() {
 
 				var currentInput = $(val),
 					val = currentInput.val(),
-					formRow = currentInput.closest('div'),
+					formRow = currentInput.closest('div '),
 					label = formRow.find('label'),
+					tooltip = formRow.find('.form__error'),
 					labelText = formRow.find('label').text().toLowerCase(),
 					txtError = 'Введите ' + labelText;
+					console.log(txtError);
 
 				if (val.length === 0) {
+					
+					if (formRow.siblings('label').hasClass('captcha__title')) {
+						txtError = formRow.siblings('label').text().slice(0,11);
+					}
+
 					label
 						.addClass('animated hinge')
 						.css('color','#f97e76')
 						.next('textarea')
 						.addClass('has__error');
-
-					app.tooltip.text(txtError).show();
+					
+					tooltip.text(txtError).show();
 					valid = false;
 				} else {
 
@@ -78,6 +82,7 @@ $(function() {
 			$(this)
 				.siblings('.form__error')
 				.text('спасибо')
+				.css('color','#82ca51')
 				.fadeOut(2500);
 
 			$(this)
