@@ -115,7 +115,7 @@
 									</div>
 								</div>
 								<div class="form__col_r">
-									<input class="captcha__code" type="text" id="captchaText" />
+									<input class="captcha__code" type="text" id="captchaText" placeholder="введите код" />
 									<span class="form__error"></span>
 								</div>	
 							</div>
@@ -150,19 +150,25 @@
 		
 	<script src="js/jquery-1.11.1.min.js"></script>
 	<script src="js/jquery.placeholder.js"></script>
-	<script src="js/prefixfree.js"></script>
+	<!-- <script src="js/prefixfree.js"></script> -->
 	<script src="js/jquery.clientsidecaptcha.js"></script>
 	<script src="js/main.js"></script>
 	<script type="text/javascript">
 
 	
+			// function createCaptcha() {
 
-			var flag = $("form").clientSideCaptcha({
-				input: "#captchaText", 
-				display: "#captcha",
-				pass : function() { console.log('ok'); return true; },
-				fail : function() { console.log('fales'); return false; }
-			});
+			// 	var flag = $("form").clientSideCaptcha({
+			// 		input: "#captchaText", 
+			// 		display: "#captcha",
+			// 		pass : function() { console.log('ok'); return true; },
+			// 		fail : function() { console.log('fales'); return false; }
+			// 	});
+
+			// 	return flag;
+			// }
+			
+			// console.log(createCaptcha());			
 
 
 		</script>

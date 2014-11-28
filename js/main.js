@@ -17,13 +17,16 @@ $(function() {
 		initialize: function () {
 			this.form__data = $('.form__data');
 			this.setUpListener();
+			this.createCaptcha();	
 		},
 
 		setUpListener: function () {
 			$('.form__data').on('submit', app.submitForm);
+			// $('.form__data').on('submit', app.createCaptcha);
 			$('.form__data').on('keydown', 'input, textarea', app.removeError);
 			$('.form__data').on('click', '.form__reset', app.resetForm);
 			$('.form__data').on('blur', 'input, textarea', app.validField);
+			$('#captchaText').on('blur', app.validCaptchaCode);
 		},
 
 		submitForm: function (e) {
@@ -32,6 +35,7 @@ $(function() {
 			if (app.validateForm(app.form__data) === false ) {
 				return false;
 			}
+
 
 			console.log('df');
 		},
@@ -125,9 +129,10 @@ $(function() {
 		},
 
 		validField: function () {
-			var currentVal = $(this).val();
+			var input = $(this),
+				inputVal = input.val();
 			
-			if (currentVal.length === 0) {
+			if (inputVal.length === 0) {
 
 				var	formRow = $(this).closest('div '),
 					label = formRow.find('label'),
@@ -140,10 +145,26 @@ $(function() {
 					.next('textarea')
 					.addClass('has__error');
 
-				currentInput.addClass('has__error');
+				input.addClass('has__error');
 				tooltip.text(txtError).show();
 
 			}
+		}, 
+		
+		createCaptcha: function () {
+			$("form").clientSideCaptcha({
+				input: "#captchaText", 
+				display: "#captcha",
+				pass : function() { return true; },
+				fail : function() { return false; }
+			});
+		},
+
+		validCaptchaCode: function () {
+			var dataForm = $('.form__data').data().captchaText,
+				valInput = $('.captcha__code').val();
+
+			return dataForm !== valInput ? false: true;
 		}
 
 
