@@ -12,7 +12,8 @@
 		<link rel="stylesheet" href="css/ie8.css" />
 	<![endif]-->
 	<!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
 <body>
@@ -115,7 +116,7 @@
 									</div>
 								</div>
 								<div class="form__col_r">
-									<input class="captcha__code" type="text" id="captchaText" placeholder="введите код" />
+									<input class="captcha__code" name="captchacode" type="text" id="captchaText" placeholder="введите код" />
 									<span class="form__error"></span>
 								</div>	
 							</div>
@@ -150,27 +151,8 @@
 		
 	<script src="js/jquery-1.11.1.min.js"></script>
 	<script src="js/jquery.placeholder.js"></script>
-	<!-- <script src="js/prefixfree.js"></script> -->
+	<script src="js/prefixfree.js"></script>
 	<script src="js/jquery.clientsidecaptcha.js"></script>
 	<script src="js/main.js"></script>
-	<script type="text/javascript">
-
-	
-			// function createCaptcha() {
-
-			// 	var flag = $("form").clientSideCaptcha({
-			// 		input: "#captchaText", 
-			// 		display: "#captcha",
-			// 		pass : function() { console.log('ok'); return true; },
-			// 		fail : function() { console.log('fales'); return false; }
-			// 	});
-
-			// 	return flag;
-			// }
-			
-			// console.log(createCaptcha());			
-
-
-		</script>
 </body>
 </html>

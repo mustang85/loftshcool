@@ -270,20 +270,30 @@ footer p {
 }
 
 .list__item {
-	color: #37424d;
-	font-size: 1.2em;
+	color: #5a636b;
+	font-size: 1.05em;
+	line-height: 1.2em;
 	margin: 0 0 26px;
-	line-height: 1em;
+	text-align: center;
+	position: relative;
 }
 
 .list__item strong {
 	display: block;
-	font: 1.05em fira_sansmedium, Arial, Helvetica, sans-serif;
+	font: 0.9em/1.3em fira_sansmedium, Arial, Helvetica, sans-serif;
+	margin: 12px 0 5px;
 }
+
 
 .general_info .list {
 	text-align: center;
 	margin: 0;
+}
+
+.general_info .list__item {
+	font-size: 1.2em;
+	line-height: 1.1em;
+	padding: 0;
 }
 
 .list__tag {
@@ -369,62 +379,9 @@ footer p {
 	width: 32px;
 }
 
-/* experience */
 
-.experience .h2 {
-	margin: 0 0 31px;
-}
-
-.experience .list,
-.education .list {
-	margin: 0;
-}
-
-.experience .list__item,
-.education .list__item {
-	color: #5a636b;
-	position: relative;
-	text-align: center;
-	
-}
-
-.experience .list__item,
-.education .list__item {
-	font: 0.95em/1.3em fira_sanslight, Arial, Helvetica, sans-serif;
-	margin: 0 0 32px;
-}
-
-.experience .list__item strong,
-.education .list__item strong {
-	font: normal 1.1em/1em fira_sansbook, Arial, Helvetica, sans-serif;
+.content section strong {
 	display: block;
-	margin: 0 0 4px;
-}
-
-.experience .icon_paper,
-.education .icon_paper,
-.education .icon_knowledge,
-.experience .icon_suitcase {
-	display: block;
-	margin: 0 auto 16px;
-	
-}
-
-/* education */
-.education .h2 {
-	margin: 0 0 34px;
-}
-
-.education .list__item {
-	margin: 0 0 35px;
-}
-
-.education .icon_paper {
-	left: 0;
-}
-
-.education .icon_knowledge {
-	left: -8px;	
 }
 
 /* aside */
@@ -587,6 +544,7 @@ footer p {
 .portfolio .list__item {
 	display: block;
 	margin: 0 auto 35px;
+	padding: 0;
 	position: relative;
 	vertical-align: top;
 	width: 211px;
@@ -1214,6 +1172,9 @@ input:focus {
 #captcha table {
 }
 
+.popup_project .error {
+	display: none;
+}
 
 .animated {
   -webkit-animation-duration: 1s;
@@ -1561,6 +1522,25 @@ input:focus {
 		padding: 0;
 		width: auto;
 	}
+
+	.content .list {
+		margin: 0 0 0 70px
+	}
+
+	.content .list__item {
+		padding: 0 0 0 60px;
+		text-align: left;
+	}
+
+	.content .list__item .icon {
+		position: absolute;
+		top: 4px;
+		left: 0;
+	}
+
+	.content .list__item .icon_paper {
+		left: 8px;
+	}
 	
 	.main {
 		margin: 0 auto 105px;
@@ -1642,12 +1622,16 @@ input:focus {
 		font-size: 1.1em;
 		line-height: 1.7em;
 		margin: 0 0 10px;
+		padding: 0;
+	}
+	
+	.general_info .list__item strong {
+		float: left;
 	}
 
 	.list__item strong {
 		font-size: 1.1em;
 		margin: 0 10px 0 0;
-		float: left;
 	}
 
 	.list__more {
@@ -1694,9 +1678,6 @@ input:focus {
 
 
 	/* education */
-	.education .h2 {
-		margin: 0 0 34px;
-	}
 
 	.education .list__item {
 		margin: 0 0 28px;
@@ -2158,99 +2139,7 @@ input:focus {
 		margin-right: 0 !important;
 	}
 
-	.list__item {
-		color: #37424d;
-		font-size: 0.9375em;
-		margin: 0 0 15px;
-		line-height: 1em;
-		text-align: left;
-	}
 
-	.list__item strong {
-		display: inline;
-		font: 1.05em fira_sansmedium, Arial, Helvetica, sans-serif;
-		margin: 0 4px 0 0;
-	}
-
-	.general_info .list {
-		margin: 0 0 0 273px;
-	}
-
-	.list__tag {
-	    font: 0.9em proxima_nova_condensedSBd, Arial, Helvetica, sans-serif;
-	    line-height: 1.482em;
-	}
-
-	.list__item_layout {
-		overflow: hidden;
-		margin: 0 10px 0 0;
-	}
-
-	.list__item_layout strong {
-		float: left;
-	}
-
-	.list__more {
-		margin: 0 0 0 154px;
-	}
-
-	/* experience */
-	.content .experience {
-		padding: 0;
-	}
-	.experience .h2 {
-		margin: 0 0 31px;
-	}
-
-	.experience .list,
-	.education .list {
-		margin: 0 0 0 70px;
-	}
-
-	.experience .list__item,
-	.education .list__item {
-		padding: 0 0 0 60px;
-		text-align: left;
-	}
-
-	.experience .list__item,
-	.education .list__item {
-		font: 0.9365em fira_sanslight, Arial, Helvetica, sans-serif;
-		margin: 0 0 25px;
-	}
-
-	.experience .list__item strong,
-	.education .list__item strong {
-		font: normal 1em/1em fira_sansbook, Arial, Helvetica, sans-serif;
-		margin: 0 4px 0 0;
-	}
-
-
-	/* education */
-	.education .h2 {
-		margin: 0 0 34px;
-	}
-
-	.education .list__item {
-		margin: 0 0 35px;
-		height: 30px;
-	}
-
-	.experience .icon_paper, 
-	.education .icon_paper, 
-	.education .icon_knowledge, 
-	.experience .icon_suitcase {
-		position: absolute;
-		left: 0;
-	}
-
-	.education .icon_paper {
-		left: 0;
-	}
-
-	.education .icon_knowledge {
-		left: -8px;	
-	}
 
 	/* aside */
 	aside {
@@ -2389,6 +2278,7 @@ input:focus {
 	}
 
 	.portfolio .list__item {
+		padding: 0;
 		margin: 0 25px 44px 0;
 		width: 182px;
 	}
@@ -2426,7 +2316,7 @@ input:focus {
 		bottom: 2px;
 		top: 2px;
 		z-index: 10;
-		-webkit-transition: left 1s ease-in-out, opacity 2s ease-in-out;
+		-webkit-transition: left 0.5s ease-in-out, opacity 1s ease-in-out;
 	}
 
 	.portfolio .thumbnail__project {
@@ -2723,6 +2613,11 @@ input:focus {
 		padding: 0 0 0 12px;
 		position: absolute;
 		top: auto;
+	}
+
+	.error:after {
+		display: none;
+		
 	}
 
 	.error_corner {

@@ -38,14 +38,12 @@
 		var table = $('<table></table>').css({ 
 			'font-family' : 'cursive',
 			'color' : '#fff', 
-			'background-color' : '#A0A0A0',
+			'background-color' : '#3ba8c0',
 			'text-decoration' : 'none'
 		});
 		var row = $('<tr></tr>').appendTo(table);
 		for (var i=0; i < captchaText.length; i++) {
-			$('<td>' + captchaText.charAt(i) + '</td>').css({
-				'border' : '1px solid lightgrey'
-			}).appendTo(row);
+			$('<td>' + captchaText.charAt(i) + '</td>').appendTo(row);
 		}
 		table.appendTo(options.display);
 
