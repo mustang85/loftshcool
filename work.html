@@ -13,6 +13,8 @@
 	<![endif]-->
 	<!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+
     <![endif]-->
 </head>
 <body>
@@ -172,7 +174,7 @@
 			<h2 class="h2">Добавление проекта</h2>
 			<form class="form__data" name="registration" method="post" action="/">
 				<div class="form__row">
-					<div class="form__col_l active">
+					<div class="form__col_l">
 						<label for="name_project">Название проекта</label>
 			       
 						<input type="text" name="name_project" id="name_project" value="" tabindex="1" required="true"  placeholder="Введите название"/>
@@ -181,7 +183,7 @@
 
 					</div>
 
-					<div class="form__col_l active">
+					<div class="form__col_l">
 						<span class="img__txt">Картинка проекта</span>
 						<span class="img__input">Загрузите изображение</span>
 						<label class="icon img__project" for="img_project">
@@ -193,7 +195,7 @@
 						<span class="error">изображение</span>
 					</div>
 
-					<div class="form__col_l active">
+					<div class="form__col_l">
 						<label for="url_project">URL проекта</label>
 
 						<input type="text" name="url_project" id="url_project" value="" tabindex="3" required="true"  placeholder="Добавьте ссылку"/>
@@ -201,7 +203,7 @@
 						<span class="error">ссылка на проект</span>
 					</div>
 
-					<div class="form__col_l active">
+					<div class="form__col_l">
 						<label for="descr_project">Описание</label>
 
 						<textarea name="descr_project" id="descr_project" cols="10" rows="10" placeholder="Пара слов о Вашем проекте"></textarea>
@@ -220,7 +222,9 @@
 		</div>
 	</div>
 	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/jquery.placeholder.js"></script>
 	<script src="js/prefixfree.js"></script>
+	<script src="js/jquery.clientsidecaptcha.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>
